@@ -7,6 +7,7 @@ class loginMenu extends StatefulWidget {
 
 class loginMenuState extends State {
   TextEditingController usernameController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,15 @@ class loginMenuState extends State {
           ),
           body: Center(
               child: Column(children: <Widget>[
+            //Text for Username
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Username',
+                style: TextStyle(fontSize: 15, color: Colors.black),
+              ),
+            ),
+            //Textfield for username
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
@@ -24,6 +34,25 @@ class loginMenuState extends State {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'User Name',
+                ),
+              ),
+            ),
+            //Text for Password
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Password',
+                style: TextStyle(fontSize: 15, color: Colors.black),
+              ),
+            ),
+            //Text field for password
+            Container(
+              padding: EdgeInsets.all(10),
+              child: TextField(
+                controller: passwordController,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
                 ),
               ),
             ),
