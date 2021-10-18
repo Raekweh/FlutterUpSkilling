@@ -1,3 +1,9 @@
-import 'package:flutter/material.dart';
+import 'dart:js_util';
 
-void main() {}
+import 'package:flutter/material.dart';
+import 'package:upskillingproject/src/app.dart';
+
+void main() {
+  loginMenu login = loginMenu();
+  runApp(login);
+}
