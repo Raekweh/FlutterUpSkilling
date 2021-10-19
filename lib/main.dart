@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:upskillingproject/src/search.dart';
+import 'package:upskillingproject/src/map.dart';
 
 // void main() {
 //   loginMenu login = loginMenu();
