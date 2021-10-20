@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:upskillingproject/src/map.dart';
+import 'package:provider/provider.dart';
+import 'package:upskillingproject/Map/geolocatorService.dart';
+import 'package:upskillingproject/Screens/MapMenu.dart';
 
 // void main() {
 //   loginMenu login = loginMenu();
@@ -9,15 +11,19 @@ import 'package:upskillingproject/src/map.dart';
 void main() => runApp(myApp());
 
 class myApp extends StatelessWidget {
+  final locatorService = GeoLocatorService();
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      title: 'Parking App',
-      theme: ThemeData(
-        primaryColor: Colors.blue,
+    return FutureProvider(
+      create: (context) => locatorService.getLocation(),
+      initialData: null,
+      child: MaterialApp(
+        title: 'Parking App',
+        theme: ThemeData(
+          primaryColor: Colors.blue,
+        ),
+        home: Search(),
       ),
-      home: Search(),
     );
   }
 }
