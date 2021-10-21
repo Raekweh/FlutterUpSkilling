@@ -15,8 +15,8 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureProvider(
-      create: (context) => locatorService.getLocation(),
       initialData: null,
+      create: (context) => locatorService.getLocation(),
       child: MaterialApp(
         title: 'Parking App',
         theme: ThemeData(
