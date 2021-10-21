@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:upskillingproject/Map/geolocatorService.dart';
+import 'package:upskillingproject/Map/services/geolocatorService.dart';
 import 'package:upskillingproject/Screens/MapMenu.dart';
 
 // void main() {
