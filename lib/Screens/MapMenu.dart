@@ -13,27 +13,6 @@ class Search extends StatelessWidget {
     final placesProvider = Provider.of<Future<List<Place>>?>(context);
     final markerService = MarkerService();
 
-    //   return Scaffold(
-    //     body: (currentPosition != null)
-    //         ? Column(
-    //             children: <Widget>[
-    //               Container(
-    //                 height: MediaQuery.of(context).size.height,
-    //                 width: MediaQuery.of(context).size.width,
-    //                 child: GoogleMap(
-    //                   initialCameraPosition: CameraPosition(
-    //                       target: LatLng(-36.848461, 174.763336), zoom: 15.0),
-    //                   zoomGesturesEnabled: true,
-    //                 ),
-    //               )
-    //             ],
-    //           )
-    //         : Center(
-    //             child: CircularProgressIndicator(),
-    //           ),
-    //   );
-    // }
-
     return FutureProvider(
       create: (context) => placesProvider,
       initialData: null,
