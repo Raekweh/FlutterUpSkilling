@@ -9,7 +9,7 @@ import 'package:upskillingproject/Map/services/markerservice.dart';
 class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final currentPosition = Provider.of<Position>(context);
+    final currentPosition = Provider.of<Position?>(context);
     final placesProvider = Provider.of<Future<List<Place>>?>(context);
     final markerService = MarkerService();
 
@@ -39,7 +39,7 @@ class Search extends StatelessWidget {
       initialData: null,
       child: Scaffold(
           body: (currentPosition != null)
-              ? Consumer<List<Place>>(
+              ? Consumer<List<Place>?>(
                   builder: (_, places, __) {
                     var markers = (places != null)
                         ? markerService.getMarkers(places)
