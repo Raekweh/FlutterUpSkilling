@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:upskillingproject/Screens/LoginMenu.dart';
 import 'package:upskillingproject/Screens/MapMenu.dart';
+import 'package:upskillingproject/Screens/SettingsMenu.dart';
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class NavigationBarState extends State<NavigationBar> {
 
   final screens = [
     Search(),
-    loginMenu(),
+    Settings(),
   ];
 
   @override

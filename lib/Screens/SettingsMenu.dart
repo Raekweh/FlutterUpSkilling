@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SettingsMenu extends StatefulWidget {
-  const SettingsMenu({Key? key}) : super(key: key);
+class Settings extends StatefulWidget {
+  const Settings({Key? key}) : super(key: key);
 
   @override
   _SettingsMenuState createState() => _SettingsMenuState();
 }
 
-class _SettingsMenuState extends State<SettingsMenu> {
+class _SettingsMenuState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
