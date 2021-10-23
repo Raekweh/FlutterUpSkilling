@@ -27,7 +27,7 @@ class Search extends StatelessWidget {
                         ? Column(
                             children: <Widget>[
                               Container(
-                                height: MediaQuery.of(context).size.height,
+                                height: MediaQuery.of(context).size.height/1.1,
                                 width: MediaQuery.of(context).size.width,
                                 child: GoogleMap(
                                   initialCameraPosition: CameraPosition(

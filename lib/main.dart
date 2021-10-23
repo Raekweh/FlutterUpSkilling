@@ -5,6 +5,7 @@ import 'package:upskillingproject/Map/services/geolocatorService.dart';
 import 'package:upskillingproject/Map/services/placeservice.dart';
 import 'package:upskillingproject/Screens/MapMenu.dart';
 import 'Map/models/place.dart';
+import 'NavigationBar/NavBar.dart';
 
 void main() => runApp(myApp());
 
@@ -31,7 +32,7 @@ class myApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.blue,
         ),
-        home: Search(),
+        home: NavigationBar(),
       ),
     );
   }
