@@ -3,7 +3,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:upskillingproject/Map/services/geolocatorService.dart';
 import 'package:upskillingproject/Map/services/placeservice.dart';
-import 'package:upskillingproject/Screens/MapMenu.dart';
 import 'Map/models/place.dart';
 import 'NavigationBar/NavBar.dart';
 
