@@ -14,7 +14,7 @@ class loginMenuState extends State {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text('Flutter FlatButton Example'),
+            title: Text('Login'),
           ),
           body: Center(
               child: Column(children: <Widget>[
