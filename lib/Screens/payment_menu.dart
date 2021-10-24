@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ParkingApp/Payment/SelectingHoursMenu.dart';
-import 'package:ParkingApp/Payment/Validation.dart';
+import 'package:ParkingApp/Payment/selecting_hours_menu.dart';
+import 'package:ParkingApp/Payment/validation.dart';
 
 class PaymentMenu extends StatefulWidget {
   const PaymentMenu({Key? key}) : super(key: key);

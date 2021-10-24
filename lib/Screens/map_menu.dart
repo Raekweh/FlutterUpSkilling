@@ -3,7 +3,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:ParkingApp/Map/models/place.dart';
-import 'package:ParkingApp/Map/services/markerservice.dart';
+import 'package:ParkingApp/Map/services/marker_service.dart';
 
 class Search extends StatelessWidget {
   @override

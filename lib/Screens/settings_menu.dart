@@ -1,3 +1,4 @@
+import 'package:ParkingApp/Register/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsMenuState extends State<Settings> {
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,7 +56,9 @@ class _SettingsMenuState extends State<Settings> {
           Container(
             width: double.infinity,
             child: OutlineButton(
-              onPressed: () {},
+              onPressed: () async{
+                await _auth.signOut();
+              },
               child: Text(
                 'Logout',
                 style: TextStyle(fontSize: 15, color: Colors.black),
