@@ -1,4 +1,4 @@
-import 'package:ParkingApp/Register_Login/sign_in.dart';
+import 'package:ParkingApp/Register/sign_in.dart';
 import 'package:flutter/cupertino.dart';
 
 class Authenticate extends StatefulWidget {

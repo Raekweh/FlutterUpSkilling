@@ -1,13 +1,17 @@
+import 'package:ParkingApp/register/models/app_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:ParkingApp/Register_Login/models/AppUserInfo.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   //create user object based on firebaseuser
-  AppUserInfo? _userFromFirebaseUser(User user)
-  {
-    return user != null ? AppUserInfo(uid: user.uid) : null;
+  AppUser? _userCreator(User? user) {
+    return user != null ? AppUser(user.uid) : null;
+  }
+
+  //auth change user stream
+  Stream<AppUser?> get user {
+    return _auth.authStateChanges().map(_userCreator);
   }
 
   //Sign in anon
@@ -15,7 +19,7 @@ class AuthService {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
-      return _userFromFirebaseUser(user!);
+      return _userCreator(user);
     } catch (e) {
       print(e.toString());
       return null;

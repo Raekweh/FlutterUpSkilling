@@ -16,7 +16,7 @@ class _SelectingHoursState extends State<SelectingHours> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Payment'),
+          title: Text('payment'),
           leading: new IconButton(
             icon: new Icon(Icons.arrow_back), onPressed: () {
             Navigator.pop(context);

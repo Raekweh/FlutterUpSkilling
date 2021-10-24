@@ -35,7 +35,7 @@ class _SettingsMenuState extends State<Settings> {
             child: OutlineButton(
               onPressed: () {},
               child: Text(
-                'Payment History',
+                'payment History',
                 style: TextStyle(fontSize: 15, color: Colors.black),
               ),
             ),

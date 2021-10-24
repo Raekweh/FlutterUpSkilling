@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:ParkingApp/Map/services/geolocatorService.dart';
 import 'package:ParkingApp/Map/services/placeservice.dart';
 import 'Map/models/place.dart';
-import 'NavigationBar/nav_bar.dart';
-import 'package:ParkingApp/Register_Login/authenticate.dart';
+import 'Register/authenticate.dart';
+import 'navigation_bar/nav_bar.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
