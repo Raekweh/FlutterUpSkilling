@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'auth.dart';
+
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
 
@@ -8,6 +10,9 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+
+  final AuthService _authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,12 +23,21 @@ class _SignInState extends State<SignIn> {
         title: Text('Sign in')
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: RaisedButton(
-          child: Text('Signin Anon'),
+          child: const Text('Signin Anon'),
           onPressed: () async
           {
-
+            dynamic result = await _authService.signInAnon();
+            if(result == null)
+              {
+                print('error signing in');
+              }
+            else
+              {
+                print('signed in');
+                print(result);
+              }
           },
         )
       ),
