@@ -1,3 +1,4 @@
+import 'package:ParkingApp/Style/styling.dart';
 import 'package:flutter/material.dart';
 import 'auth.dart';
 
@@ -45,6 +46,7 @@ class _RegisterMenuState extends State<RegisterMenu> {
                     height: 20.0,
                   ),
                   TextFormField(
+                    decoration: textInputDecoration.copyWith(hintText: 'Email'),
                     validator: (val) => val!.isEmpty ? 'Enter an Email' : null,
                     onChanged: (val) {
                       setState(() => email = val);
@@ -54,6 +56,7 @@ class _RegisterMenuState extends State<RegisterMenu> {
                     height: 20.0,
                   ),
                   TextFormField(
+                    decoration: textInputDecoration.copyWith(hintText: 'Password'),
                     obscureText: true,
                     validator: (val) => val!.length < 6
                         ? 'Enter a password 6+ chars long'

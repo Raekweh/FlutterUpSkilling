@@ -20,7 +20,6 @@ class myApp extends StatelessWidget {
           print('YOu have an error ${snapshot.error.toString()}');
           return Text('Something went wrong');
         } else if (snapshot.hasData) {
-          print('Your database works');
           return logIn();
         } else {
           return Center(
