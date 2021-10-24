@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class loginMenu extends StatefulWidget {
+  const loginMenu({Key? key}) : super(key: key);
+
   @override
   loginMenuState createState() => loginMenuState();
 }
@@ -65,7 +67,8 @@ class loginMenuState extends State {
                 ),
                 color: Colors.blueAccent,
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                },
               ),
             ),
           ]))),
