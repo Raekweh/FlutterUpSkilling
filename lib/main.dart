@@ -2,8 +2,6 @@ import 'package:ParkingApp/Register/register_main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'NavigationBar/navigation_menu.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(myApp());
@@ -23,7 +21,7 @@ class myApp extends StatelessWidget {
           return Text('Something went wrong');
         } else if (snapshot.hasData) {
           print('Your database works');
-          return NavigationMenu();
+          return logIn();
         } else {
           return Center(
             child: CircularProgressIndicator(),
