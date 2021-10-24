@@ -15,6 +15,7 @@ class _SettingsMenuState extends State<Settings> {
         home: Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
+        centerTitle: true,
       ),
       body: Center(
           child: Column(

@@ -18,6 +18,7 @@ class _PaymentMenuState extends State<PaymentMenu> {
       home:Scaffold(
         appBar: AppBar(
           title: Text('Payment'),
+          centerTitle: true,
         ),
         body: Center(
           child: new Column(children: <Widget>[

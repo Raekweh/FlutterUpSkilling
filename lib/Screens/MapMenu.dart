@@ -17,6 +17,10 @@ class Search extends StatelessWidget {
       create: (context) => placesProvider,
       initialData: null,
       child: Scaffold(
+        appBar: AppBar(
+          title: Text('Map'),
+          centerTitle: true,
+        ),
           body: (currentPosition != null)
               ? Consumer<List<Place>?>(
                   builder: (_, places, __) {
@@ -27,7 +31,7 @@ class Search extends StatelessWidget {
                         ? Column(
                             children: <Widget>[
                               Container(
-                                height: MediaQuery.of(context).size.height/1.1,
+                                height: MediaQuery.of(context).size.height/1.25,
                                 width: MediaQuery.of(context).size.width,
                                 child: GoogleMap(
                                   initialCameraPosition: CameraPosition(

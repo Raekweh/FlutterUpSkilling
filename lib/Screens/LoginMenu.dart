@@ -15,6 +15,7 @@ class loginMenuState extends State {
       home: Scaffold(
           appBar: AppBar(
             title: Text('Login'),
+            centerTitle: true,
           ),
           body: Center(
               child: Column(children: <Widget>[
