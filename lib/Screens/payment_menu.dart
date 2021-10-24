@@ -20,7 +20,7 @@ class _PaymentMenuState extends State<PaymentMenu> {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text('payment'),
+              title: Text('Payment'),
               centerTitle: true,
             ),
             body: Center(

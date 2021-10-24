@@ -17,7 +17,7 @@ class Search extends StatelessWidget {
       initialData: null,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('map'),
+          title: Text('Map'),
           centerTitle: true,
         ),
           body: (currentPosition != null)

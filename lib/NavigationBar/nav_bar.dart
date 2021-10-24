@@ -28,12 +28,12 @@ class NavigationBarState extends State<NavigationBar> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.payment),
-          label: 'payment',
+          label: 'Payment',
           backgroundColor: Colors.white,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.map),
-          label: 'map',
+          label: 'Map',
           backgroundColor: Colors.white,
         ),
         BottomNavigationBarItem(
