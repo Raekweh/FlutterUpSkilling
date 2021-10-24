@@ -1,4 +1,4 @@
-import 'package:upskillingproject/Map/models/location.dart';
+import 'package:ParkingApp/Map/models/location.dart';
 
 class Geometry {
   final Location location;

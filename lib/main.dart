@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
-import 'package:upskillingproject/Map/services/geolocatorService.dart';
-import 'package:upskillingproject/Map/services/placeservice.dart';
+import 'package:ParkingApp/Map/services/geolocatorService.dart';
+import 'package:ParkingApp/Map/services/placeservice.dart';
 import 'Map/models/place.dart';
 import 'NavigationBar/NavBar.dart';
 

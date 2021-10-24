@@ -1,4 +1,4 @@
-import 'package:upskillingproject/Map/models/place.dart';
+import 'package:ParkingApp/Map/models/place.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 

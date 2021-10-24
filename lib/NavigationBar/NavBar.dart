@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:upskillingproject/Screens/MapMenu.dart';
-import 'package:upskillingproject/Screens/PaymentMenu.dart';
-import 'package:upskillingproject/Screens/SettingsMenu.dart';
+import 'package:ParkingApp/Screens/MapMenu.dart';
+import 'package:ParkingApp/Screens/PaymentMenu.dart';
+import 'package:ParkingApp/Screens/SettingsMenu.dart';
 
 
 class NavigationBar extends StatefulWidget {
