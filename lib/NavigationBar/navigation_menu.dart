@@ -1,6 +1,6 @@
 import 'package:ParkingApp/Map/models/place.dart';
-import 'package:ParkingApp/Map/services/geolocatorservice.dart';
-import 'package:ParkingApp/Map/services/placeservice.dart';
+import 'package:ParkingApp/Map/services/geolocator_service.dart';
+import 'package:ParkingApp/Map/services/place_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
