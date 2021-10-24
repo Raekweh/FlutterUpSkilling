@@ -48,4 +48,17 @@ class AuthService {
       return null;
     }
   }
+
+  //sign in with email & password
+  Future loginWithEmailPassword(String email, String password) async {
+    try {
+      UserCredential result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      User? user = result.user;
+      return _userCreator(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 }
