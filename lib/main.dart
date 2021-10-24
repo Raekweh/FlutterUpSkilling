@@ -6,7 +6,7 @@ import 'package:ParkingApp/Map/services/geolocatorService.dart';
 import 'package:ParkingApp/Map/services/placeservice.dart';
 import 'Map/models/place.dart';
 import 'NavigationBar/NavBar.dart';
-import 'Screens/LoginMenu.dart';
+import 'package:ParkingApp/Register_Login/Authenticate.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ class logIn extends StatelessWidget {
           else if(snapshot.hasData)
             {
               print('Your database works');
-              return loginMenu();
+              return Authenticate();
             }
           else
             {
