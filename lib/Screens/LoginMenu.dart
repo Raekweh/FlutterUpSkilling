@@ -1,3 +1,4 @@
+import 'package:ParkingApp/Register_Login/RegisterMenu.dart';
 import 'package:flutter/material.dart';
 
 class loginMenu extends StatefulWidget {
@@ -8,7 +9,7 @@ class loginMenu extends StatefulWidget {
 }
 
 class loginMenuState extends State {
-  TextEditingController usernameController = new TextEditingController();
+  TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
 
   @override
@@ -25,7 +26,7 @@ class loginMenuState extends State {
             Container(
               padding: EdgeInsets.all(10),
               child: Text(
-                'Username',
+                'Email',
                 style: TextStyle(fontSize: 15, color: Colors.black),
               ),
             ),
@@ -33,10 +34,10 @@ class loginMenuState extends State {
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
-                controller: usernameController,
+                controller: emailController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'User Name',
+                  labelText: 'Email',
                 ),
               ),
             ),
@@ -60,6 +61,18 @@ class loginMenuState extends State {
               ),
             ),
             Container(
+                child: TextButton(
+                    child: Text(
+                      'register',
+                      style: TextStyle(fontSize: 20.0),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterMenu()));
+                    })),
+            Container(
               margin: EdgeInsets.all(25),
               child: FlatButton(
                 child: Text(
@@ -68,8 +81,7 @@ class loginMenuState extends State {
                 ),
                 color: Colors.blueAccent,
                 textColor: Colors.white,
-                onPressed: () {
-                },
+                onPressed: () {},
               ),
             ),
           ]))),
