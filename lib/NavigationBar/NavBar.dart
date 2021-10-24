@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:upskillingproject/Screens/LoginMenu.dart';
 import 'package:upskillingproject/Screens/MapMenu.dart';
+import 'package:upskillingproject/Screens/PaymentMenu.dart';
 import 'package:upskillingproject/Screens/SettingsMenu.dart';
+
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -10,9 +11,10 @@ class NavigationBar extends StatefulWidget {
 }
 
 class NavigationBarState extends State<NavigationBar> {
-  int currentIndex = 0;
+  int currentIndex = 1;
 
   final screens = [
+    PaymentMenu(),
     Search(),
     Settings(),
   ];
@@ -24,6 +26,11 @@ class NavigationBarState extends State<NavigationBar> {
       currentIndex: currentIndex,
       onTap: (index) => setState(() => currentIndex = index),
       items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.payment),
+          label: 'Payment',
+          backgroundColor: Colors.white,
+        ),
         BottomNavigationBarItem(
           icon: Icon(Icons.map),
           label: 'Map',
