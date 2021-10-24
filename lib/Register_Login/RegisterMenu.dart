@@ -45,12 +45,12 @@ class _RegisterMenuState extends State<RegisterMenu> {
           ),
           Container(
               child: TextField(
-                controller: _passwordController,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                ),
-              )),
+            controller: _passwordController,
+            decoration: InputDecoration(
+              labelText: 'Password',
+              border: OutlineInputBorder(),
+            ),
+          )),
           Container(
             margin: EdgeInsets.all(25),
             child: FlatButton(
@@ -60,9 +60,12 @@ class _RegisterMenuState extends State<RegisterMenu> {
               ),
               color: Colors.blueAccent,
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+
+              },
             ),
-          ),        ],
+          ),
+        ],
       )),
     ));
   }
