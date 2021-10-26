@@ -1,7 +1,7 @@
 import 'package:ParkingApp/Style/styling.dart';
 import 'package:flutter/material.dart';
 
-import '../Register/auth.dart';
+import '../Register/Authentication/auth.dart';
 
 class LoginMenu extends StatefulWidget {
   final Function toogleView;
