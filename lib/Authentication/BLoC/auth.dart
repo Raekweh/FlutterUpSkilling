@@ -1,4 +1,4 @@
-import 'package:ParkingApp/Register/models/app_user.dart';
+import 'package:ParkingApp/Authentication/data/app_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {

@@ -1,4 +1,4 @@
-import 'package:ParkingApp/Map/models/place.dart';
+import 'package:ParkingApp/Map/data/place.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MarkerService {

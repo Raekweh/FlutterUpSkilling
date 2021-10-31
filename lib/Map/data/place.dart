@@ -1,4 +1,4 @@
-import 'package:ParkingApp/Map/models/geometry.dart';
+import 'package:ParkingApp/Map/data/geometry.dart';
 
 class Place {
   final String name;

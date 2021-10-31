@@ -1,17 +1,18 @@
+import 'package:ParkingApp/Authentication/BLoC/auth.dart';
 import 'package:ParkingApp/Style/styling.dart';
 import 'package:flutter/material.dart';
-import 'auth.dart';
 
-class RegisterMenu extends StatefulWidget {
+
+class LoginMenu extends StatefulWidget {
   final Function toogleView;
 
-  RegisterMenu({required this.toogleView});
+  LoginMenu({required this.toogleView});
 
   @override
-  _RegisterMenuState createState() => _RegisterMenuState();
+  LoginMenuState createState() => LoginMenuState();
 }
 
-class _RegisterMenuState extends State<RegisterMenu> {
+class LoginMenuState extends State<LoginMenu> {
   final AuthService _authService = AuthService();
   final _formKey = GlobalKey<FormState>();
 
@@ -25,12 +26,12 @@ class _RegisterMenuState extends State<RegisterMenu> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('Register'),
+        title: Text('Sign in'),
         centerTitle: true,
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
-            label: Text('Log In'),
+            label: Text('Register'),
             onPressed: () {
               widget.toogleView();
             },
@@ -71,20 +72,18 @@ class _RegisterMenuState extends State<RegisterMenu> {
                       height: 20.0,
                     ),
                     RaisedButton(
-                      color: Colors.blueAccent,
-                      child:
-                          Text('Register', style: TextStyle(color: Colors.white)),
-                      onPressed: () async {
-                        if (_formKey.currentState!.validate()) {
-                          dynamic result = await _authService
-                              .registerWithEmailPassword(email, password);
-                          if (result == null) {
-                            setState(
-                                () => error = 'Please supply valid email');
+                        color: Colors.blueAccent,
+                        child: Text('Sign in',
+                            style: TextStyle(color: Colors.white)),
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            dynamic result = await _authService
+                                .loginWithEmailPassword(email, password);
+                            if (result == null) {
+                              setState(() => error = 'Could not log in with those credentials');
+                            }
                           }
-                        }
-                      },
-                    ),
+                        }),
                     SizedBox(height: 12.0),
                     Text(
                       error,

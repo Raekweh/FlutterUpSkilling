@@ -1,6 +1,6 @@
-import 'package:ParkingApp/Screens/log_in_menu.dart';
+import 'package:ParkingApp/Authentication/UI/register_menu.dart';
+import 'package:ParkingApp/Authentication/UI/log_in_menu.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:ParkingApp/Register/Authentication/register_menu.dart';
 
 class Authenticate extends StatefulWidget {
   const Authenticate({Key? key}) : super(key: key);

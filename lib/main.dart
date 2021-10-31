@@ -1,6 +1,7 @@
-import 'package:ParkingApp/Register/Authentication/register_main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'Authentication/BLoC/register_main.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,12 +1,12 @@
-import 'package:ParkingApp/Map/models/place.dart';
-import 'package:ParkingApp/Map/services/geolocator_service.dart';
-import 'package:ParkingApp/Map/services/place_service.dart';
+import 'package:ParkingApp/Map/data/place.dart';
+import 'package:ParkingApp/Map/data/geolocator_service.dart';
+import 'package:ParkingApp/Map/data/place_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 
-import 'nav_bar.dart';
+import '../BLoC/nav_bar.dart';
 
 class NavigationMenu extends StatelessWidget {
   final locatorService = GeoLocatorService();

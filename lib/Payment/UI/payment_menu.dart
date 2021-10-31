@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ParkingApp/Payment/selecting_hours_menu.dart';
-import 'package:ParkingApp/Payment/validation.dart';
+import 'package:ParkingApp/Payment/UI/selecting_hours_menu.dart';
+import 'package:ParkingApp/Payment/data/validation.dart';
 
 class Payment extends StatelessWidget {
   TextEditingController areaIDController = TextEditingController();

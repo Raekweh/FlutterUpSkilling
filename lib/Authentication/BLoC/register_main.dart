@@ -1,9 +1,9 @@
-import 'package:ParkingApp/Register/Authentication/wrapper.dart';
+import 'package:ParkingApp/Authentication/BLoC/wrapper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'auth.dart';
-import '../models/app_user.dart';
+import '../data/app_user.dart';
 
 class logIn extends StatelessWidget {
   const logIn({Key? key}) : super(key: key);
