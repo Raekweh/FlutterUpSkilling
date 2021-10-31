@@ -14,7 +14,7 @@ class NavigationBarState extends State<NavigationBar> {
   int currentIndex = 1;
 
   final screens = [
-    PaymentMenu(),
+    Payment(),
     Search(),
     Settings(),
   ];

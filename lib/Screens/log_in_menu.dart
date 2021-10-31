@@ -23,6 +23,7 @@ class LoginMenuState extends State<LoginMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
         title: Text('Sign in'),
@@ -37,58 +38,60 @@ class LoginMenuState extends State<LoginMenu> {
           )
         ],
       ),
-      body: Container(
-          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-          child: Form(
-              key: _formKey,
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  TextFormField(
-                    decoration: textInputDecoration.copyWith(hintText: 'Email'),
-                    validator: (val) => val!.isEmpty ? 'Enter an Email' : null,
-                    onChanged: (val) {
-                      setState(() => email = val);
-                    },
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  TextFormField(
-                    decoration: textInputDecoration.copyWith(hintText: 'Password'),
-                    obscureText: true,
-                    validator: (val) => val!.length < 6
-                        ? 'Enter a password 6+ chars long'
-                        : null,
-                    onChanged: (val) {
-                      setState(() => password = val);
-                    },
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  RaisedButton(
-                      color: Colors.blueAccent,
-                      child: Text('Sign in',
-                          style: TextStyle(color: Colors.white)),
-                      onPressed: () async {
-                        if (_formKey.currentState!.validate()) {
-                          dynamic result = await _authService
-                              .loginWithEmailPassword(email, password);
-                          if (result == null) {
-                            setState(() => error = 'Could not log in with those credentials');
+      body: SingleChildScrollView(
+        child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+            child: Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextFormField(
+                      decoration: textInputDecoration.copyWith(hintText: 'Email'),
+                      validator: (val) => val!.isEmpty ? 'Enter an Email' : null,
+                      onChanged: (val) {
+                        setState(() => email = val);
+                      },
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextFormField(
+                      decoration: textInputDecoration.copyWith(hintText: 'Password'),
+                      obscureText: true,
+                      validator: (val) => val!.length < 6
+                          ? 'Enter a password 6+ chars long'
+                          : null,
+                      onChanged: (val) {
+                        setState(() => password = val);
+                      },
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    RaisedButton(
+                        color: Colors.blueAccent,
+                        child: Text('Sign in',
+                            style: TextStyle(color: Colors.white)),
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            dynamic result = await _authService
+                                .loginWithEmailPassword(email, password);
+                            if (result == null) {
+                              setState(() => error = 'Could not log in with those credentials');
+                            }
                           }
-                        }
-                      }),
-                  SizedBox(height: 12.0),
-                  Text(
-                    error,
-                    style: TextStyle(color: Colors.red, fontSize: 14.0),
-                  ),
-                ],
-              ))),
+                        }),
+                    SizedBox(height: 12.0),
+                    Text(
+                      error,
+                      style: TextStyle(color: Colors.red, fontSize: 14.0),
+                    ),
+                  ],
+                ))),
+      ),
     );
   }
 }
